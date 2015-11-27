@@ -1,5 +1,5 @@
 KEYS = 13
-LENGTHS = 4 5
+LENGTHS = 4 5 6
 
 check: $(addprefix check_, $(LENGTHS))
 
