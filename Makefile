@@ -1,8 +1,12 @@
 KEYS = 13
 LENGTHS = 4 5 6
+FILES = $(addsuffix .txt, $(addprefix triangle_worksheet_, $(LENGTHS))) check
 
-all: $(addsuffix .txt, $(addprefix triangle_worksheet_, $(LENGTHS))) check
+all: $(FILES)
 .PHONY: all
+
+clean:
+	rm -f $(FILES)
 
 check: $(addprefix check_, $(LENGTHS))
 .PHONY: check
